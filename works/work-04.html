@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafe de PARIS｜架空カフェサイト | Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/svg/star-solid.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/work-detail.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+</head>
+<body>
+  <header class="header header--scrolled">
+    <div class="header__inner">
+      <a href="../index.html" class="header__logo">Portfolio</a>
+      <nav class="header__nav">
+        <a href="../index.html#profile" class="header__nav-link">Profile</a>
+        <a href="../index.html#works" class="header__nav-link active">Works</a>
+        <a href="../index.html#about" class="header__nav-link">About</a>
+        <a href="../index.html#contact" class="header__nav-link">Contact</a>
+      </nav>
+      <button class="header__menu-btn" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="work-hero work-hero--bg">
+      <img class="work-hero__bg-img" src="../assets/work4/main.png" alt="">
+      <div class="container">
+        <div class="work-hero__content">
+          <a href="../index.html#works" class="work-hero__back">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M20 12H4M4 12L10 6M4 12L10 18" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            作品一覧に戻る
+          </a>
+          <span class="work-hero__number">WORK 04</span>
+          <h1 class="work-hero__title">Cafe de PARIS<br>架空カフェサイト</h1>
+          <div class="work-hero__tags">
+            <span class="tag">Web Design</span>
+            <span class="tag">Front-end</span>
+          </div>
+          <p class="work-hero__subtitle">課題要件をもとに設計・実装した、カフェサイトのTOPページ制作。</p>
+          
+          <div class="work-hero__cta">
+            <a href="https://mgalo1231.github.io/WD16_06_kadai03/" class="btn--view-work" target="_blank" rel="noopener">
+              作品を見る
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Meta info -->
+          <dl class="work-hero__meta-list">
+            <div class="work-hero__meta-row">
+              <dt>期間</dt>
+              <dd>2025.11（約2週間）</dd>
+            </div>
+            <div class="work-hero__meta-row">
+              <dt>種類</dt>
+              <dd>課題制作</dd>
+            </div>
+            <div class="work-hero__meta-row">
+              <dt>担当</dt>
+              <dd>Web UI デザイン/実装</dd>
+            </div>
+            <div class="work-hero__meta-row">
+              <dt>ツール</dt>
+              <dd>Figma/Cursor</dd>
+            </div>
+          </dl>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="work-content work-content--minimal">
+      <div class="container container--narrow">
+
+        <!-- 制作プロセス -->
+        <div class="work-section work-section--lined">
+          <h2 class="work-section__title work-section__title--minimal">制作プロセス</h2>
+          <div class="process-flow">
+            <div class="process-flow__step">
+              <div class="process-flow__label">課題提起</div>
+              <div class="process-flow__body">
+                <p>課題で求められた「店舗の雰囲気と食事内容が伝わるTOPページ」を起点に、<br>見た目の魅力と必要情報へのアクセスしやすさを両立することを制作目標に設定した。</p>
+              </div>
+            </div>
+            <div class="process-flow__arrow">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 0V20M8 20L2 14M8 20L14 14" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="process-flow__step">
+              <div class="process-flow__label">リサーチ</div>
+              <div class="process-flow__body">
+                <p>カフェ系サイトを中心に、デザイン（配色・余白・タイポ）と交互動線（ナビ固定、セクション遷移、視線誘導）を調査。<br>気になった事例はワイヤーフレームとして模写し、レイアウトの型を比較検証した。</p>
+              </div>
+            </div>
+            <div class="process-flow__arrow">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 0V20M8 20L2 14M8 20L14 14" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="process-flow__step">
+              <div class="process-flow__label">コンセプト確定</div>
+              <div class="process-flow__body">
+                <p>課題要件を満たしつつ、「A taste of Paris in every cup」を軸に、やわらかく上品な世界観と読みやすい情報設計を両立する方向に決定。<br>親しみやすい街角カフェの空気感を、写真・配色・余白で表現した。</p>
+              </div>
+            </div>
+            <div class="process-flow__arrow">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 0V20M8 20L2 14M8 20L14 14" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="process-flow__step">
+              <div class="process-flow__label">情報設計</div>
+              <div class="process-flow__body">
+                <p>ユーザーの閲覧順を「ファーストビュー → 店舗の想い → MENU → NEWS → ACCESS」に整理。<br>各セクションに明確な見出しと導線を配置し、必要情報（営業時間・住所・メニュー）へ最短で到達できる構成にした。</p>
+              </div>
+            </div>
+            <div class="process-flow__arrow">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 0V20M8 20L2 14M8 20L14 14" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="process-flow__step">
+              <div class="process-flow__label">画面設計</div>
+              <div class="process-flow__body">
+                <p>ワイヤーで情報優先の骨組みを作成後、高保真でビジュアルトーンを統一。<br>ロゴ・配色・余白・写真トーンを揃え、可読性を崩さない範囲で装飾を調整。<br>「かわいい」だけで終わらない、実用性のあるUIを目指した。</p>
+              </div>
+            </div>
+            <div class="process-flow__arrow">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 0V20M8 20L2 14M8 20L14 14" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="process-flow__step">
+              <div class="process-flow__label">実装</div>
+              <div class="process-flow__body">
+                <p>HTML/CSS/JavaScriptで実装し、レスポンシブ対応まで含めて仕上げた。<br>Geminiの新モデルを使ってvibe codingを試し、メッセージセクションを追加実装した。</p>
+              </div>
+            </div>
+            <div class="process-flow__arrow">
+              <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 0V20M8 20L2 14M8 20L14 14" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="process-flow__step">
+              <div class="process-flow__label">振り返り</div>
+              <div class="process-flow__body">
+                <p>課題要件の達成に加えて、参考調査→模写→再設計の流れが有効だと実感した。<br>AI活用は速度面で効果があった一方、最終的な構成判断・デザイン整合は自分で担う必要があると感じた。<br>今後は、実ユーザーテストを通じて導線と情報優先度をさらに改善したい。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 学んだこと -->
+        <div class="work-section">
+          <h2 class="work-section__title work-section__title--minimal">学んだこと</h2>
+          <div class="learnings-list learnings-list--minimal">
+            <div class="learnings-item">
+              <span class="learnings-item__label">設計前リサーチの効果</span>
+              <span class="learnings-item__text">いきなり作り始めるより、参考分析とワイヤー模写を先に行うことで、レイアウト判断が速くなり、修正コストを大きく減らせると分かった。</span>
+            </div>
+            <div class="learnings-item">
+              <span class="learnings-item__label">UIは見た目＋導線で評価される</span>
+              <span class="learnings-item__text">ビジュアルの統一感だけでなく、「必要情報にどれだけ迷わず辿り着けるか」が体験品質を決めると実感した。</span>
+            </div>
+            <div class="learnings-item">
+              <span class="learnings-item__label">AI活用の実践知</span>
+              <span class="learnings-item__text">vibe codingで実装スピードは上がるが、情報設計・可読性・トーン統一などの品質担保は人間の設計力が不可欠だと理解した。</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- デザイン一覧 -->
+        <div class="work-section">
+          <h2 class="work-section__title work-section__title--minimal">デザイン一覧</h2>
+          <div class="work-gallery work-gallery--three-col">
+            <div class="work-gallery__item">
+              <img src="../assets/work4/design1.png" alt="Cafe de PARIS デザイン案 1">
+              <p class="work-gallery__caption">ワイヤーフレーム</p>
+            </div>
+            <div class="work-gallery__item">
+              <img src="../assets/work4/design2.png" alt="Cafe de PARIS デザイン案 2">
+              <p class="work-gallery__caption">デザインカンプ</p>
+            </div>
+            <div class="work-gallery__item">
+              <img src="../assets/work4/design3.png" alt="Cafe de PARIS デザイン案 3">
+              <p class="work-gallery__caption">最終デザイン</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ナビゲーション -->
+        <div class="work-nav">
+          <a href="work-03.html" class="work-nav__link work-nav__link--prev">
+            <svg class="work-nav__arrow work-nav__arrow--left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M19 12H5M12 5L5 12L12 19" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="work-nav__label">Previous</span>
+            <span class="work-nav__title">BAEKHYUN</span>
+          </a>
+          <a href="work-05.html" class="work-nav__link work-nav__link--next">
+            <span class="work-nav__label">Next</span>
+            <span class="work-nav__title">就職ならOWAS</span>
+            <svg class="work-nav__arrow work-nav__arrow--right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__text">© 2026 WU DONGNI. All rights reserved.</p>
+    </div>
+  </footer>
+  <button class="back-to-top" aria-label="トップへ戻る">
+    <span class="back-to-top__tape"></span>
+    <svg class="back-to-top__star" width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 0L14.59 8.41L23 12L14.59 15.59L12 24L9.41 15.59L1 12L9.41 8.41L12 0Z"/>
+    </svg>
+    <svg class="back-to-top__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 20V4M12 4L6 10M12 4L18 10" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="back-to-top__text">TOP</span>
+  </button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

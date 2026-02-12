@@ -1,0 +1,234 @@
+/* ========================================
+   Components - 通用组件样式
+   ======================================== */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-xl);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.section {
+  padding: var(--space-5xl) 0;
+  position: relative;
+}
+
+.section--alt {
+  background-color: var(--bg-secondary);
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-3xl);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.125rem, 1.8vw, 1.6rem);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.section-line {
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.section-number {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-tertiary);
+  letter-spacing: 0.08em;
+}
+
+.section-subtitle {
+  margin-top: calc(-1 * var(--space-xl));
+  margin-bottom: var(--space-2xl);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: var(--text-base);
+    letter-spacing: 0.18em;
+  }
+
+  .section-number {
+    font-size: var(--text-sm);
+  }
+
+  .section-subtitle {
+    margin-top: calc(-1 * var(--space-md));
+    margin-bottom: var(--space-xl);
+    font-size: var(--text-xs);
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-xl);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn--primary {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn--primary:hover {
+  background-color: var(--text-secondary);
+  transform: translateY(-2px);
+}
+
+.btn--outline {
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  background-color: transparent;
+}
+
+.btn--outline:hover {
+  border-color: var(--text-primary);
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.btn--highlight {
+  background: linear-gradient(transparent 50%, var(--highlight-bg) 50%);
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 0;
+}
+
+.btn--highlight:hover {
+  background: linear-gradient(transparent 30%, var(--highlight-bg) 30%);
+}
+
+/* Tags */
+.tag {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+  border-radius: var(--radius-full);
+  transition: var(--transition-fast);
+}
+
+.tag:hover {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+.tag--accent {
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+
+/* Cards */
+.card {
+  background-color: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Highlight Text */
+.highlight {
+  background: linear-gradient(transparent 60%, var(--highlight-bg) 60%);
+  padding: 0 var(--space-xs);
+}
+
+/* Handwriting Text */
+.handwriting {
+  font-family: var(--font-handwriting);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* Decorative Line */
+.deco-line {
+  width: 60px;
+  height: 2px;
+  background-color: var(--accent);
+}
+
+/* Image Container */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-slow);
+}
+
+.img-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0;
+  transition: var(--transition-base);
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+/* Patterns */
+.dots-pattern {
+  background-image: radial-gradient(var(--border-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.grid-pattern {
+  background-image: 
+    linear-gradient(var(--border-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-color) 1px, transparent 1px);
+  background-size: 40px 40px;
+}

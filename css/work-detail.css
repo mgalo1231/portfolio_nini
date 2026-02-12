@@ -1,0 +1,2044 @@
+/* ========================================
+   Work Detail Page - 作品详情页样式
+   ======================================== */
+
+.work-hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-3xl) 0;
+  padding-top: calc(var(--header-height, 80px) + var(--space-3xl));
+  position: relative;
+  background-color: var(--bg-secondary);
+}
+
+.work-hero__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+}
+
+.work-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.work-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-2xl);
+  transition: var(--transition-base);
+}
+
+.work-hero__back:hover {
+  color: var(--text-primary);
+  transform: translateX(-5px);
+}
+
+.work-hero__number {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  letter-spacing: 0.2em;
+  margin-bottom: var(--space-md);
+}
+
+.work-hero__title {
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  margin-bottom: var(--space-lg);
+  max-width: 800px;
+}
+
+.work-hero__subtitle {
+  font-size: var(--text-xl);
+  color: var(--text-secondary);
+  margin-bottom: var(--space-xl);
+}
+
+.work-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* View Work CTA Button */
+.work-hero__cta {
+  margin-top: var(--space-xl);
+}
+
+.btn--view-work {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: linear-gradient(transparent 40%, var(--highlight-bg) 40%);
+  color: var(--text-primary);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.btn--view-work:hover {
+  background: linear-gradient(transparent 20%, var(--highlight-bg) 20%);
+  color: var(--text-primary);
+}
+
+.btn--view-work svg {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.btn--view-work:hover svg {
+  transform: translate(3px, -3px);
+}
+
+/* Work Meta */
+.work-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+  padding: var(--space-2xl) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.work-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.work-meta__label {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.work-meta__value {
+  font-size: var(--text-base);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Work Content */
+.work-content {
+  padding: var(--space-4xl) 0;
+}
+
+.work-section {
+  margin-bottom: var(--space-4xl);
+}
+
+.work-section:last-child {
+  margin-bottom: 0;
+}
+
+.work-section__title {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  margin-bottom: var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.work-section__title::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background-color: var(--accent);
+  border-radius: var(--radius-full);
+}
+
+.work-section__content {
+  font-size: var(--text-lg);
+  line-height: 2;
+  color: var(--text-secondary);
+}
+
+/* Concept Block */
+.concept-block {
+  background-color: var(--bg-secondary);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.concept-block::before {
+  content: '"';
+  font-family: var(--font-display);
+  font-size: 120px;
+  color: var(--accent-light);
+  position: absolute;
+  top: -20px;
+  left: 20px;
+  line-height: 1;
+  opacity: 0.5;
+}
+
+.concept-block__text {
+  font-size: var(--text-xl);
+  line-height: 1.8;
+  position: relative;
+  z-index: 1;
+}
+
+/* Process Timeline */
+.process-timeline {
+  position: relative;
+  padding-left: var(--space-3xl);
+}
+
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 12px;
+  width: 2px;
+  height: 100%;
+  background-color: var(--border-color);
+}
+
+.process-step {
+  position: relative;
+  padding-bottom: var(--space-2xl);
+}
+
+.process-step:last-child {
+  padding-bottom: 0;
+}
+
+.process-step::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-3xl) + 6px);
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-full);
+}
+
+.process-step__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.process-step__content {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* Point List */
+.point-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.point-item {
+  display: flex;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+}
+
+.point-item__number {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.point-item__content {
+  flex: 1;
+}
+
+.point-item__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.point-item__text {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* Work Gallery */
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.work-gallery__item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.work-gallery__item--full {
+  grid-column: 1 / -1;
+}
+
+.work-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Learnings Block */
+.learnings-block {
+  background: linear-gradient(135deg, var(--accent-transparent) 0%, transparent 100%);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--accent);
+}
+
+.learnings-block__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.learnings-block__content {
+  font-size: var(--text-base);
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* Work Navigation */
+.work-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-2xl) 0;
+  border-top: 1px solid var(--border-color);
+  margin-top: var(--space-3xl);
+}
+
+.work-nav__placeholder {
+  width: 1px;
+  visibility: hidden;
+}
+
+.work-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.work-nav__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.work-nav__link:hover {
+  color: var(--text-primary);
+}
+
+.work-nav__link:hover::after {
+  width: 100%;
+}
+
+.work-nav__link--prev {
+  flex-direction: row;
+}
+
+.work-nav__link--next {
+  flex-direction: row;
+}
+
+.work-nav__arrow {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.work-nav__link--prev:hover .work-nav__arrow {
+  transform: translateX(-4px);
+}
+
+.work-nav__link--next:hover .work-nav__arrow {
+  transform: translateX(4px);
+}
+
+.work-nav__label {
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.work-nav__link:hover .work-nav__label {
+  color: var(--text-secondary);
+}
+
+.work-nav__title {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* ========================================
+   Decorative Elements - 装饰元素
+   ======================================== */
+
+/* Large Background Number */
+.work-deco-number {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: 25vw;
+  font-weight: 700;
+  color: var(--text-primary);
+  opacity: 0.03;
+  line-height: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Floating Stars for Detail Page */
+.work-deco-star {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  animation: work-float 4s ease-in-out infinite;
+}
+
+.work-deco-star--1 { top: 15%; left: 5%; animation-delay: 0s; }
+.work-deco-star--2 { top: 25%; right: 15%; animation-delay: 0.5s; }
+.work-deco-star--3 { bottom: 20%; left: 10%; animation-delay: 1s; }
+.work-deco-star--4 { bottom: 30%; right: 8%; animation-delay: 1.5s; }
+
+@keyframes work-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Handwriting Notes */
+.work-deco-note {
+  font-family: var(--font-handwriting);
+  font-size: var(--text-lg);
+  color: var(--accent);
+  display: inline-block;
+  transform: rotate(-3deg);
+  margin-left: var(--space-md);
+}
+
+/* Section Title with Note */
+.work-section__header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.work-section__header .work-section__title {
+  margin-bottom: 0;
+}
+
+/* Enhanced Point Item */
+.point-item {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.point-item:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-light);
+}
+
+.point-item__number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-md);
+  font-size: var(--text-lg);
+  flex-shrink: 0;
+}
+
+/* Gallery with Tape Effect */
+.work-gallery__item {
+  position: relative;
+  transition: none;
+}
+
+.work-gallery__item:hover {
+  transform: none;
+}
+
+.work-gallery__item img {
+  transition: none;
+  border: 1px solid #1a1a1a;
+  box-sizing: border-box;
+}
+
+.work-gallery__item:hover img {
+  transform: none;
+}
+
+/* Tape Decoration */
+.work-gallery__tape {
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(126, 184, 218, 0.3) 10%, 
+    rgba(126, 184, 218, 0.3) 90%, 
+    transparent 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+}
+
+.work-gallery__tape--tl {
+  top: -8px;
+  left: 20px;
+  transform: rotate(-15deg);
+}
+
+.work-gallery__tape--tr {
+  top: -8px;
+  right: 20px;
+  transform: rotate(15deg);
+}
+
+/* Corner Decorations */
+.work-deco-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+.work-deco-corner::before,
+.work-deco-corner::after {
+  content: '';
+  position: absolute;
+  background-color: var(--accent-light);
+}
+
+.work-deco-corner--tl { top: 0; left: 0; }
+.work-deco-corner--tl::before { top: 0; left: 0; width: 25px; height: 2px; }
+.work-deco-corner--tl::after { top: 0; left: 0; width: 2px; height: 25px; }
+
+.work-deco-corner--br { bottom: 0; right: 0; }
+.work-deco-corner--br::before { bottom: 0; right: 0; width: 25px; height: 2px; }
+.work-deco-corner--br::after { bottom: 0; right: 0; width: 2px; height: 25px; }
+
+/* Dotted Circle Decoration */
+.work-deco-circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 2px dashed var(--accent-light);
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+/* Line Group Decoration */
+.work-deco-lines {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  transform: rotate(-25deg);
+  pointer-events: none;
+}
+
+.work-deco-lines span {
+  display: block;
+  height: 2px;
+  background-color: var(--accent);
+  opacity: 0.4;
+}
+
+.work-deco-lines span:nth-child(1) { width: 25px; }
+.work-deco-lines span:nth-child(2) { width: 18px; margin-left: 4px; }
+.work-deco-lines span:nth-child(3) { width: 12px; margin-left: 8px; }
+
+/* Hero Enhancements */
+.work-hero {
+  overflow: hidden;
+}
+
+.work-hero__decorations {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Content Section Decoration Wrapper */
+.work-section--decorated {
+  position: relative;
+}
+
+/* Meta Section Enhancement */
+.work-meta__item {
+  position: relative;
+  padding: var(--space-md);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  transition: transform 0.3s ease;
+}
+
+.work-meta__item:hover {
+  transform: translateY(-2px);
+}
+
+/* Learnings Block Enhancement */
+.learnings-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.learnings-block::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 100px;
+  height: 100px;
+  border: 2px dashed var(--accent-light);
+  border-radius: 50%;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* Work Nav Enhancement */
+
+/* ========================================
+   Award Badge - 受賞バッジ
+   ======================================== */
+
+.work-hero__award {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: linear-gradient(135deg, var(--accent-transparent) 0%, var(--accent-light) 100%);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+}
+
+.work-hero__award svg {
+  color: var(--accent);
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+/* 受賞バッジ 右上角配置 */
+.work-hero__award--corner {
+  position: absolute;
+  top: calc(var(--header-height, 80px) + var(--space-md));
+  right: var(--space-xl);
+  z-index: 3;
+  margin: 0;
+  flex-wrap: wrap;
+  text-align: left;
+  line-height: 1.4;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--accent-light) 0%, rgba(184, 212, 232, 0.95) 100%);
+  border: 1px solid var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.work-hero__award--corner svg {
+  flex-shrink: 0;
+  animation: none;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(0.9); }
+}
+
+/* ========================================
+   Site Structure - サイト構成図
+   ======================================== */
+
+.site-structure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.site-structure__page {
+  width: 100%;
+  max-width: 500px;
+  padding: var(--space-lg);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-structure__page:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.site-structure__page--main {
+  background: linear-gradient(135deg, var(--accent-transparent) 0%, var(--bg-secondary) 100%);
+  border-color: var(--accent);
+}
+
+.site-structure__page-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.site-structure__page-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-md);
+}
+
+.site-structure__page-icon svg {
+  color: var(--accent);
+}
+
+.site-structure__page-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.site-structure__badge {
+  font-size: var(--text-xs);
+  padding: 2px 8px;
+  background-color: var(--accent);
+  color: white;
+  border-radius: var(--radius-full);
+  font-weight: 500;
+}
+
+.site-structure__features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.site-structure__features li {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.site-structure__features li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.site-structure__arrow {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-xs) 0;
+}
+
+.site-structure__arrow svg {
+  animation: bounce-down 1.5s ease-in-out infinite;
+}
+
+@keyframes bounce-down {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+/* ========================================
+   Role Cards - 役割カード
+   ======================================== */
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.role-card {
+  padding: var(--space-xl);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-light);
+}
+
+.role-card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-md);
+}
+
+.role-card__title {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.role-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.role-card__list li {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  padding-left: var(--space-md);
+  position: relative;
+  line-height: 1.6;
+}
+
+.role-card__list li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* ========================================
+   Tools Grid - ツールグリッド
+   ======================================== */
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.tool-category {
+  padding: var(--space-lg);
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.tool-category__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-tertiary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tool-category__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm);
+  border-radius: var(--radius-md);
+  transition: transform 0.3s ease;
+}
+
+.tool-item:hover {
+  transform: translateY(-2px);
+}
+
+.tool-item__icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.tool-item__name {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   Learnings Grid - 学びグリッド
+   ======================================== */
+
+.learnings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.learnings-block__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.learnings-block__list li {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.learnings-block__list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* ========================================
+   Reflection Block - 振り返りブロック
+   ======================================== */
+
+.reflection-block {
+  padding: var(--space-xl);
+  background: linear-gradient(135deg, var(--accent-transparent) 0%, transparent 100%);
+  border-radius: var(--radius-lg);
+  border-left: 4px solid var(--accent);
+}
+
+.reflection-block p {
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   Process Timeline Enhancement
+   ======================================== */
+
+.process-step__week {
+  display: inline-block;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--accent);
+  background-color: var(--accent-transparent);
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-xs);
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+   Gallery Caption - ギャラリーキャプション
+   ======================================== */
+
+.work-gallery__caption {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: center;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--bg-secondary);
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+  margin-top: -4px;
+}
+
+/* ========================================
+   Responsive
+   ======================================== */
+
+@media (max-width: 768px) {
+  .work-hero { min-height: 50vh; }
+  .work-hero__title { font-size: var(--text-3xl); }
+  .work-meta { grid-template-columns: repeat(2, 1fr); }
+  .work-sections-row {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  .work-gallery { grid-template-columns: 1fr; }
+  .work-gallery--two-col { grid-template-columns: 1fr; }
+  .work-gallery--three-col { grid-template-columns: 1fr; }
+  .work-gallery--showcase { grid-template-columns: 1fr; }
+  .work-gallery--work2-mosaic {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "topLeft"
+      "topRight"
+      "result"
+      "typeList"
+      "community"
+      "login";
+  }
+  .work-gallery__stack { gap: var(--space-xl); }
+  .process-timeline { padding-left: var(--space-2xl); }
+  .process-step::before { left: calc(-1 * var(--space-2xl) + 6px); }
+  
+  /* New components responsive */
+  .role-grid { grid-template-columns: 1fr; }
+  .tools-grid { grid-template-columns: 1fr; }
+  .learnings-grid { grid-template-columns: 1fr; }
+  .site-structure__page { max-width: 100%; }
+  
+  /* Award badge */
+  .work-hero__award {
+    font-size: var(--text-xs);
+    padding: var(--space-xs) var(--space-sm);
+  }
+  
+  /* Hide decorations on mobile */
+  .work-deco-number { display: none; }
+  
+  .work-deco-star { display: none; }
+  .work-deco-corner { display: none; }
+  .work-deco-circle { display: none; }
+  .work-deco-lines { display: none; }
+  .work-gallery__tape { display: none; }
+  .work-deco-note { display: none; }
+}
+
+@media (max-width: 1024px) {
+  .role-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .learnings-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ========================================
+   Compact Mode - 紧凑模式
+   ======================================== */
+
+/* Compact Hero */
+.work-hero--compact {
+  min-height: auto;
+  padding: var(--space-2xl) 0;
+  padding-top: calc(var(--header-height, 80px) + var(--space-xl));
+}
+
+.work-hero--compact .work-hero__title {
+  font-size: var(--text-4xl);
+  margin-bottom: var(--space-md);
+}
+
+.work-hero--compact .work-hero__subtitle {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-md);
+}
+
+.work-hero--compact .work-hero__back {
+  margin-bottom: var(--space-lg);
+}
+
+.work-hero--compact .work-hero__cta {
+  margin-top: var(--space-lg);
+}
+
+/* Compact Section */
+.section--compact {
+  padding-top: 0;
+  padding-bottom: var(--space-lg);
+}
+
+/* Compact Content */
+.work-content--compact {
+  padding: var(--space-xl) 0;
+}
+
+.work-content--compact .work-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.work-content--compact .work-section__header {
+  margin-bottom: var(--space-md);
+}
+
+.work-content--compact .work-section__title {
+  font-size: var(--text-xl);
+}
+
+/* Compact Concept Block */
+.work-content--compact .concept-block {
+  padding: var(--space-lg);
+}
+
+.work-content--compact .concept-block__text {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+}
+
+.work-content--compact .concept-block::before {
+  font-size: 80px;
+  top: -10px;
+}
+
+/* Compact Point List */
+.point-list--compact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+.point-list--compact .point-item {
+  padding: var(--space-md);
+}
+
+.point-list--compact .point-item__number {
+  width: 32px;
+  height: 32px;
+  font-size: var(--text-base);
+}
+
+.point-list--compact .point-item__title {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-xs);
+}
+
+.point-list--compact .point-item__text {
+  font-size: var(--text-sm);
+  line-height: 1.5;
+}
+
+/* Horizontal Site Structure */
+.site-structure--horizontal {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: var(--space-md);
+}
+
+.site-structure--horizontal .site-structure__page {
+  flex: 1;
+  max-width: none;
+  padding: var(--space-md);
+}
+
+.site-structure--horizontal .site-structure__page-title {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-sm);
+}
+
+.site-structure--horizontal .site-structure__features {
+  gap: 2px;
+}
+
+.site-structure--horizontal .site-structure__features li {
+  font-size: var(--text-xs);
+}
+
+/* Compact Role Cards */
+.work-content--compact .role-grid {
+  gap: var(--space-md);
+}
+
+.work-content--compact .role-card {
+  padding: var(--space-md);
+}
+
+.work-content--compact .role-card__title {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-sm);
+}
+
+.work-content--compact .role-card__list {
+  gap: var(--space-xs);
+}
+
+.work-content--compact .role-card__list li {
+  font-size: var(--text-xs);
+}
+
+/* Compact Learnings */
+.work-content--compact .learnings-grid {
+  gap: var(--space-md);
+}
+
+.work-content--compact .learnings-block {
+  padding: var(--space-md);
+}
+
+.work-content--compact .learnings-block__title {
+  font-size: var(--text-base);
+  margin-bottom: var(--space-sm);
+}
+
+.work-content--compact .learnings-block__list li {
+  font-size: var(--text-xs);
+}
+
+/* Compact Gallery */
+.work-content--compact .work-gallery {
+  gap: var(--space-md);
+}
+
+.work-content--compact .work-gallery__caption {
+  font-size: var(--text-xs);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+/* Compact Nav */
+.work-content--compact .work-nav {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg) 0;
+}
+
+.work-content--compact .work-nav__link {
+  padding: var(--space-md);
+}
+
+/* Compact Responsive */
+@media (max-width: 768px) {
+  .point-list--compact {
+    grid-template-columns: 1fr;
+  }
+  
+  .site-structure--horizontal {
+    flex-direction: column;
+  }
+  
+  .work-hero--compact .work-hero__title {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* ========================================
+   Minimal Mode - 极简模式（线条分割）
+   ======================================== */
+
+/* Minimal Section */
+.section--minimal {
+  padding: var(--space-md) 0;
+}
+
+/* Inline Meta */
+.work-meta--inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.work-meta__inline-item {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.work-meta__inline-item strong {
+  color: var(--text-tertiary);
+  font-weight: 500;
+  margin-right: 4px;
+}
+
+.work-meta__divider {
+  color: var(--border-color);
+  font-size: var(--text-xs);
+}
+
+.work-content--minimal {
+  padding: var(--space-xl) 0;
+}
+
+/* 作品详情页：放宽宽度，全屏时减少两侧余白 */
+.work-content .container--narrow {
+  max-width: var(--container-work, 930px);
+}
+
+.work-content--minimal .work-section {
+  margin-bottom: var(--space-xl);
+}
+
+/* 私の役割 + 学んだこと 左右並び */
+.work-sections-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
+}
+
+.work-sections-row .work-section {
+  margin-bottom: 0;
+}
+
+.work-sections-row .work-section--lined {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* 线条分割 */
+.work-section--lined {
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 底部只保留一条分割线：导航前的最后一个 section 不显示底部边框 */
+.work-content .work-section:has(+ .work-nav) {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* 简化标题 */
+.work-section__title--minimal {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.work-section__title--minimal::before {
+  content: '';
+  width: 3px;
+  height: 20px;
+  background-color: var(--accent);
+  border-radius: var(--radius-full);
+}
+
+/* 简化概念文本 */
+.concept-text {
+  font-size: var(--text-base);
+  line-height: 1.8;
+  color: var(--text-secondary);
+}
+
+.concept-text strong {
+  color: var(--text-primary);
+}
+
+/* Minimal Point List */
+.point-list--minimal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-sm);
+}
+
+.point-item--minimal {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+}
+
+.point-item--minimal:hover {
+  transform: none;
+  box-shadow: none;
+  border: none;
+}
+
+.point-item--minimal .point-item__number {
+  width: 24px;
+  height: 24px;
+  font-size: var(--text-xs);
+  background: none;
+  border: 1px solid var(--accent);
+  flex-shrink: 0;
+}
+
+.point-item--minimal .point-item__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.point-item--minimal .point-item__text {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+/* Minimal Site Structure */
+.site-structure--minimal {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: stretch;
+}
+
+.site-structure__page--minimal {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  background: none;
+  border: none;
+  border-radius: 0;
+  border-right: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.site-structure__page--minimal:last-child {
+  border-right: none;
+}
+
+.site-structure__page--minimal:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.site-structure__page--minimal.site-structure__page--main {
+  background: none;
+  border-color: var(--border-color);
+}
+
+.site-structure__page--minimal .site-structure__page-title {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+}
+
+.site-structure__desc {
+  font-size: var(--text-sm);
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+/* Minimal Gallery */
+.work-gallery--minimal {
+  gap: var(--space-md);
+}
+
+.work-gallery--minimal .work-gallery__item {
+  box-shadow: none;
+  border: 1px solid var(--border-color);
+}
+
+.work-gallery--minimal .work-gallery__caption {
+  background: none;
+  font-size: var(--text-xs);
+  padding: var(--space-xs) 0;
+}
+
+/* サイト画面一覧：大図・無枠・下にページ名のみ */
+.work-gallery--screens {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.work-gallery--screens .work-gallery__item {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.work-gallery--screens .work-gallery__item:hover {
+  transform: none;
+}
+
+.work-gallery--screens .work-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-gallery--screens .work-gallery__item:hover img {
+  transform: none;
+}
+
+.work-gallery--screens .work-gallery__caption {
+  margin-top: var(--space-sm);
+  padding: 0;
+  background: none;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  border-radius: 0;
+}
+
+/* サイト画面一覧 2列レイアウト */
+.work-gallery--two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+}
+
+.work-gallery--two-col .work-gallery__item {
+  width: 100%;
+}
+
+/* 3列ギャラリー */
+.work-gallery--three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.work-gallery--three-col .work-gallery__item {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.work-gallery--three-col .work-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-gallery--three-col .work-gallery__caption {
+  margin-top: var(--space-sm);
+  padding: 0;
+  background: none;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  border-radius: 0;
+}
+
+/* Work 03: 左1 + 右3 レイアウト */
+.work-gallery--showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.work-gallery--showcase + .work-gallery--showcase {
+  margin-top: var(--space-2xl);
+}
+
+.work-gallery__stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+.work-gallery--showcase .work-gallery__item {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.work-gallery--showcase .work-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-gallery--showcase .work-gallery__caption {
+  margin-top: var(--space-sm);
+  padding: 0;
+  background: none;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  border-radius: 0;
+}
+
+/* Work 02: スクリーンショットモザイク */
+.work-gallery--work2-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "topLeft topRight"
+    "result typeList"
+    "result community"
+    "login .";
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.work-gallery--work2-mosaic .work-gallery__item {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.work-gallery--work2-mosaic .work-gallery__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.work-gallery--work2-mosaic .work-gallery__caption {
+  margin-top: var(--space-sm);
+  padding: 0;
+  background: none;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  border-radius: 0;
+}
+
+.work-gallery__item--w2-1 { grid-area: topLeft; }
+.work-gallery__item--w2-2 { grid-area: topRight; }
+.work-gallery__item--w2-3 { grid-area: result; }
+.work-gallery__item--w2-4 { grid-area: typeList; }
+.work-gallery__item--w2-5 { grid-area: community; }
+.work-gallery__item--w2-6 { grid-area: login; }
+
+/* 販売物：貼紙画像を縮小 */
+.work-gallery--seal .work-gallery__item img {
+  max-width: 320px;
+  width: auto;
+  height: auto;
+}
+
+.work-gallery--seal .work-gallery__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Minimal Role List */
+.role-list--minimal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.role-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.role-item:last-child {
+  border-bottom: none;
+}
+
+.role-item__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent);
+  width: 180px;
+  min-width: 180px;
+  flex-shrink: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.role-item__desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+/* Minimal Learnings List */
+.learnings-list--minimal {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.learnings-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xl);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px dashed var(--border-color);
+}
+
+.learnings-item:last-child {
+  border-bottom: none;
+}
+
+.learnings-item__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent);
+  width: 180px;
+  min-width: 180px;
+  flex-shrink: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.learnings-item__text {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+/* Minimal Responsive */
+@media (max-width: 768px) {
+  .work-meta--inline {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .work-meta__divider {
+    display: none;
+  }
+  
+  .point-list--minimal {
+    grid-template-columns: 1fr;
+  }
+  
+  .site-structure--minimal {
+    flex-direction: column;
+  }
+  
+  .site-structure__page--minimal {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    padding: var(--space-sm) 0;
+  }
+  
+  .site-structure__page--minimal:last-child {
+    border-bottom: none;
+  }
+  
+  .role-item {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .role-item__title {
+    width: auto;
+    min-width: auto;
+  }
+  
+  .learnings-item {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+  
+  .learnings-item__label {
+    width: auto;
+    min-width: auto;
+  }
+}
+
+/* ========================================
+   BG Hero - 全幅背景图英雄区
+   ======================================== */
+
+.work-hero--bg {
+  min-height: auto;
+  padding: 0;
+  padding-top: var(--header-height, 80px);
+  justify-content: stretch;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+  scroll-margin-top: var(--header-height, 80px);
+}
+
+/* 背景图片（img元素），撑满宽度，高度自适应 */
+.work-hero__bg-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 左侧半透明遮罩，保证文字可读 */
+.work-hero--bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 255, 255, 0.85) 60%,
+    rgba(255, 255, 255, 0.4) 85%,
+    transparent 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.work-hero--bg > .container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: calc(var(--header-height, 80px) + var(--space-xl));
+  padding-bottom: var(--space-2xl);
+}
+
+.work-hero--bg .work-hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+}
+
+.work-hero--bg .work-hero__back {
+  margin-bottom: var(--space-lg);
+  color: var(--text-secondary);
+}
+
+.work-hero--bg .work-hero__number {
+  font-size: var(--text-xs);
+  color: var(--text-tertiary);
+  margin-bottom: var(--space-sm);
+}
+
+.work-hero--bg .work-hero__title {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: var(--space-md);
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.work-hero--bg .work-hero__tags {
+  margin-bottom: var(--space-sm);
+}
+
+.work-hero--bg .work-hero__subtitle {
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-md);
+  color: var(--text-secondary);
+}
+
+.work-hero--bg .work-hero__cta {
+  margin-top: 0;
+  margin-bottom: var(--space-lg);
+}
+
+/* Meta list (dl) */
+.work-hero__meta-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin: 0;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.work-hero__meta-row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+}
+
+.work-hero__meta-row dt {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 48px;
+  flex-shrink: 0;
+}
+
+.work-hero__meta-row dd {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* BG Hero Responsive */
+@media (max-width: 768px) {
+  .work-hero--bg::after {
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.95) 0%,
+      rgba(255, 255, 255, 0.8) 70%,
+      rgba(255, 255, 255, 0.5) 100%
+    );
+  }
+
+  .work-hero--bg .work-hero__content {
+    max-width: 100%;
+  }
+
+  .work-hero--bg .work-hero__title {
+    font-size: var(--text-2xl);
+  }
+
+  .work-hero__award--corner {
+    top: calc(var(--header-height, 80px) + var(--space-sm));
+    right: var(--space-md);
+    font-size: var(--text-xs);
+    padding: var(--space-xs) var(--space-sm);
+    max-width: 70%;
+  }
+}
+
+/* ========================================
+   Process Flow - 制作プロセス（フローチャート）
+   ======================================== */
+
+.process-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.process-flow__step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3xl);
+  width: 100%;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-primary);
+  transition: border-color 0.3s ease;
+}
+
+.process-flow__step:hover {
+  border-color: var(--accent);
+}
+
+.process-flow__label {
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--accent);
+  width: 140px;
+  min-width: 140px;
+  flex-shrink: 0;
+  padding-top: 2px;
+  text-align: center;
+}
+
+.process-flow__body p {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.process-flow__arrow {
+  display: flex;
+  justify-content: center;
+  padding: var(--space-xs) 0;
+  color: var(--border-color);
+}
+
+/* Process Flow Responsive */
+@media (max-width: 768px) {
+  .process-flow__step {
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .process-flow__label {
+    min-width: auto;
+  }
+}
+
+/* ========================================
+   Work 05 Video + Script Table
+   ======================================== */
+
+.cm-video-frame {
+  box-shadow: none;
+  border: none;
+}
+
+.cm-video-frame video {
+  width: min(100%, 720px);
+  height: auto;
+  display: block;
+  background-color: #000;
+  margin: 0 auto;
+}
+
+.cm-script-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+}
+
+.cm-script-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background-color: var(--bg-primary);
+}
+
+.cm-script-table th,
+.cm-script-table td {
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--space-md);
+  text-align: left;
+  vertical-align: top;
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.cm-script-table th {
+  color: var(--text-primary);
+  font-weight: 600;
+  background-color: var(--bg-secondary);
+}
